@@ -3,7 +3,6 @@ import time
 import subprocess
 import reset_lib
 
-counter = 0
 serial_last_four = subprocess.getoutput("cat /proc/cpuinfo | grep Serial | awk '{print $3}'")[-4:]
 config_hash = reset_lib.config_file_hash()
 ssid_prefix = config_hash['ssid_prefix'] + " "
